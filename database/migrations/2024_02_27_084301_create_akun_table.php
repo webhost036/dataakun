@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('akun', function (Blueprint $table) {
+        Schema::connection('mysql-320a61c5-webhost036-e2fc.a.aivencloud.com')->create('akun', function (Blueprint $table) {
             $table->string('kode_akun', 50);
             $table->string('nama_akun', 255);
             $table->text('deskripsi')->nullable();
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('akun');
+        Schema::connection('mysql-320a61c5-webhost036-e2fc.a.aivencloud.com')->dropIfExists('akun');
     }
 };
