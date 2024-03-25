@@ -7,6 +7,12 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
+        /**
+     * The name of the database connection that should be used.
+     *
+     * @var string|null
+     */
+    protected $connection = 'mysql-320a61c5-webhost036-e2fc.a.aivencloud.com';
     /**
      * Seed the application's database.
      */

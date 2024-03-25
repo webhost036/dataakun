@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('failed_jobs', function (Blueprint $table) {
+        Schema::connection('mysql-320a61c5-webhost036-e2fc.a.aivencloud.com')->create('failed_jobs', function (Blueprint $table) {
             $table->id();
             $table->string('uuid')->unique();
             $table->text('connection');
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('failed_jobs');
+        Schema::connection('mysql-320a61c5-webhost036-e2fc.a.aivencloud.com')->dropIfExists('failed_jobs');
     }
 };
